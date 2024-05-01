@@ -4,6 +4,12 @@
 
 This package extends the default Boolean Group field from Nova 4. This package adds the ablity to use HTML in the labels. This is handy when you have a lot of information to show in your boolean group labels.
 
+In the example below you can see the difference in behaviour between the default Boolean Group from Nova and the Boolean Group from this package.
+
+<img src="resources/readme/preview-form.png">
+<img src="resources/readme/preview-detail.png">
+<img src="resources/readme/preview-index.png">
+
 [![Version](https://img.shields.io/packagist/v/marshmallow/boolean-group)](https://github.com/marshmallow-packages/boolean-group)
 [![Issues](https://img.shields.io/github/issues/marshmallow-packages/boolean-group)](https://github.com/marshmallow-packages/boolean-group)
 [![Code Coverage](https://img.shields.io/badge/coverage-100%25-success)](https://github.com/marshmallow-packages/boolean-group)
@@ -19,7 +25,17 @@ composer require marshmallow/boolean-group
 
 ## Usage
 
-Please reference the official documentation at [MrMallow Documentation](https://mrmallow.notion.site/Boolean-Group-86a442759bdf4eb9bf9d054250fd6ede?pvs=4)
+The usage of this package could not be easier. You use it as you would use the BooleanGroup from Nova. Please check there documentation for all the cool stuff you can do with this field out of the box. The only addition is, you can now add HTML in your labels. This package will do the rest. Check out the example below. This is the code we’ve use to take the screenshots above.
+
+```php
+use Marshmallow\BooleanGroup\BooleanGroup;
+
+BooleanGroup::make(__('From Marshmallow'), 'field_3')->options([
+    'option_1' => '<strong>Option 1</strong><br/><small>With HTML</small>',
+    'option_2' => '<strong>Option 2</strong><br/><small>With HTML</small>',
+    'option_3' => '<strong>Option 3</strong><br/><small>With HTML</small>',
+]),
+```
 
 ## Changelog
 
