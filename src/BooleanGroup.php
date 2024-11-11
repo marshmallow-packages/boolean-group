@@ -12,4 +12,17 @@ class BooleanGroup extends NovaBooleanGroup
      * @var string
      */
     public $component = 'boolean-group';
+
+    public $fullWidth = true;
+
+    /**
+     * Set the field to use all the available white-space.
+     *
+     * @return $this
+     */
+    public function cancelFullWidth()
+    {
+        $this->fullWidth = false;
+        return $this;
+    }
 }

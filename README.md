@@ -37,6 +37,17 @@ BooleanGroup::make(__('From Marshmallow'), 'field_3')->options([
 ]),
 ```
 
+### Click area
+By default, the clickable area within the border is full width. This sometimes creates an issue where users click this area without the intention to check of uncheck anything. If you want to change this behaviour, you can do so with the method below.
+
+```php
+use Marshmallow\BooleanGroup\BooleanGroup;
+
+BooleanGroup::make(__('From Marshmallow'), 'field_3')->options([
+    // ...
+])->cancelFullWidth(),
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
