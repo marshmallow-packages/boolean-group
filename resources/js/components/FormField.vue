@@ -7,16 +7,18 @@
   >
     <template #field>
       <div class="space-y-2">
-        <div v-for="option in value" style="border: 1px solid #f1f5f9;border-radius: 5px;padding: 5px 8px;">
-            <CheckboxWithLabel
-            :key="option.name"
-            :name="option.name"
-            :checked="option.checked"
-            @input="toggle($event, option)"
-            :disabled="currentlyIsReadonly"
-            >
-            <span v-html="option.label"></span>
-            </CheckboxWithLabel>
+        <div v-for="option in value" v-bind:key="option.name">
+            <div style="border: 1px solid #f1f5f9;border-radius: 5px;padding: 5px 8px;" :style="{ display: field.fullWidth ? 'block' : 'inline-block' }">
+                <CheckboxWithLabel
+                    :key="option.name"
+                    :name="option.name"
+                    :checked="option.checked"
+                    @input="toggle($event, option)"
+                    :disabled="currentlyIsReadonly"
+                    >
+                    <span v-html="option.label"></span>
+                </CheckboxWithLabel>
+            </div>
         </div>
       </div>
     </template>
