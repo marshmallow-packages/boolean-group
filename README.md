@@ -10,10 +10,15 @@ In the example below you can see the difference in behaviour between the default
 <img src="resources/readme/preview-detail.png">
 <img src="resources/readme/preview-index.png">
 
-[![Version](https://img.shields.io/packagist/v/marshmallow/boolean-group)](https://github.com/marshmallow-packages/boolean-group)
-[![Issues](https://img.shields.io/github/issues/marshmallow-packages/boolean-group)](https://github.com/marshmallow-packages/boolean-group)
-[![Code Coverage](https://img.shields.io/badge/coverage-100%25-success)](https://github.com/marshmallow-packages/boolean-group)
-[![Licence](https://img.shields.io/github/license/marshmallow-packages/boolean-group)](https://github.com/marshmallow-packages/boolean-group)
+[![Version](https://img.shields.io/packagist/v/marshmallow/boolean-group)](https://packagist.org/packages/marshmallow/boolean-group)
+[![Total Downloads](https://img.shields.io/packagist/dt/marshmallow/boolean-group)](https://packagist.org/packages/marshmallow/boolean-group)
+[![Issues](https://img.shields.io/github/issues/marshmallow-packages/boolean-group)](https://github.com/marshmallow-packages/boolean-group/issues)
+[![Licence](https://img.shields.io/packagist/l/marshmallow/boolean-group)](https://packagist.org/packages/marshmallow/boolean-group)
+
+## Requirements
+
+-   PHP `^8.0`
+-   Laravel Nova `^4.0` or `^5.0`
 
 ## Installation
 
@@ -22,6 +27,8 @@ You can install the package via composer:
 ```bash
 composer require marshmallow/boolean-group
 ```
+
+The field's service provider (`Marshmallow\BooleanGroup\FieldServiceProvider`) is auto-discovered, so no further registration is required.
 
 ## Usage
 
@@ -52,12 +59,6 @@ BooleanGroup::make(__('From Marshmallow'), 'field_3')->options([
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-## Testing
-
-```bash
-composer test
-```
-
 ## Security
 
 If you discover any security related issues, please email stef@marshmallow.dev instead of using the issue tracker.
@@ -69,4 +70,4 @@ If you discover any security related issues, please email stef@marshmallow.dev i
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see the `license` field in [`composer.json`](composer.json) for more information.
